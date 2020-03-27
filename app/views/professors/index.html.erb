@@ -1,5 +1,5 @@
 <h1> All Professors </h1><br>
-
+<section id = "all_professors">
 <% @professors.each do |professor| %>
   <section id = "professor-<%=professor.id%>">
     <h2><%= professor.name %></h2>
@@ -7,3 +7,4 @@
     <h3>Specialty: <%= professor.specialty %></h3><br>
   </section>
 <% end %>
+</section>

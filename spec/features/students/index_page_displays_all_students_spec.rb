@@ -23,4 +23,28 @@ RSpec.describe "When I visit the students index page", type: :feature do
     expect(page).to have_content("Draco Malfoy: 2")
     expect(page).to have_content("Neville Longbottom: 1")
   end
+
+  it "displays all students in alphabetical order" do
+
+      snape = Professor.create(name: "Severus Snape", age: 45, specialty: "Potions")
+      hagarid = Professor.create(name: "Rubus Hagarid", age: 38 , specialty: "Care of Magical Creatures")
+      lupin = Professor.create(name: "Remus Lupin", age: 49 , specialty: "Defense Against The Dark Arts")
+
+      harry = Student.create(name: "Harry Potter" , age: 11 , house: "Gryffindor" )
+      malfoy = Student.create(name: "Draco Malfoy" , age: 12 , house: "Slytherin" )
+      longbottom = Student.create(name: "Neville Longbottom" , age: 11 , house: "Gryffindor" )
+
+      ProfessorStudent.create(student: harry, professor: snape)
+      ProfessorStudent.create(student: harry, professor: hagarid)
+      ProfessorStudent.create(student: harry, professor: lupin)
+      ProfessorStudent.create(student: malfoy, professor: hagarid)
+      ProfessorStudent.create(student: malfoy, professor: lupin)
+      ProfessorStudent.create(student: longbottom, professor: snape)
+
+      visit("/students")
+
+      within "#all_students" do
+        expect(page).to have_content("Draco Malfoy: 2\nHarry Potter: 3\nNeville Longbottom: 1")
+      end
+  end
 end
