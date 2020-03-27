@@ -208,12 +208,44 @@
           null,
           null,
           1,
+          1,
+          null,
           null
         ]
       },
       "/Users/fredrondina/turing/2module/classwork/hogwarts_again/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/fredrondina/turing/2module/classwork/hogwarts_again/spec/features/professors/show_page_displays_professors_students_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null
         ]
       },
@@ -309,6 +341,9 @@
           1,
           null,
           null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -320,6 +355,6 @@
         ]
       }
     },
-    "timestamp": 1585322770
+    "timestamp": 1585324486
   }
 }
